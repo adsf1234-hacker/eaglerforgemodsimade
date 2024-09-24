@@ -1,0 +1,22 @@
+var pressedKeys = {};
+window.onkeyup = function(e) {
+    pressedKeys[e.keyCode] = false;
+}
+window.onkeydown = function(e) {
+        pressedKeys[e.keyCode] = true;
+    }
+    (0 + 0);
+
+ModAPI.addEventListener("frame", () => {
+    if (Boolean(pressedKeys[70] === true ? true : false)) {
+        ModAPI.displayToChat({
+            msg: 'CURRENT FPS:'
+        });
+        ModAPI.displayToChat({
+            msg: ModAPI.getFPS()
+        });
+        ModAPI.displayToChat({
+            msg: 'MADE BY GEORGE'
+        });
+    };
+});
